@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb",
+        "prettier",
+        "eslint:recommended",
+        "plugin:react/recommended", //Alerts to any errors in react
+        "plugin/node/recommended" //Alerts to any errors when typing in nodejs
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off",
+        "spaced-comment": "off" //Shuts off warning to add a space after dash in a comment
+    }
+}
