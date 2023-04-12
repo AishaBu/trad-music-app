@@ -9,8 +9,10 @@ function Form() {
   const {register, handleSubmit, formState: {errors}} = useForm();
 
   //Register input field
-  const handleRegistration = (data) => console.log(data);
- 
+  const handleRegistration = (data) => {
+    console.log(data);
+  }
+
 
   return (
     /*Chrome console produces ValidateDOM Nesting error that you cannot have 
@@ -25,6 +27,7 @@ function Form() {
         name='searchValue'
         autoComplete='off'
         placeholder="Search Artists, Songs, Albums, Videos"
+        className={errors.searchValue && 'error'}
         /*Register input field, regex pattern only accepts letters and number no special chars*/
         {...register('searchValue', {required: "A search value is required", pattern: /^[A-Za-z0-9]*$/i})}
        />

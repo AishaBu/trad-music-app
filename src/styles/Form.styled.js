@@ -4,13 +4,17 @@ const FormStyled = styled.form`
     //Searchfeild and Label
     input{
         height: 40px;
-        width: 315px;
+        width: 320px;
         border-radius: 2px;
         appearance: none;
         border: ${({theme}) => theme.colors.inputBorder};
         box-shadow: ${({theme}) => theme.shadow.boxShadow};
         font-family: ${({theme}) => theme.fonts.fontFamilyCourier};
-        padding-left: 6px; //Adjust caret in input field
+        padding-left: 35px; //Adjust caret in input field
+    }
+
+    .error input{
+        border: 1px solid red;
     }
 
     input[type=search]:focus{
@@ -20,13 +24,39 @@ const FormStyled = styled.form`
 
     //Placeholder
     input::placeholder{
-        padding-left: 6px;
+        padding-right: 30px;
         font-size: 12px;
     }
 
+    /*Default X in search field*/
+    input[type=search]::-webkit-search-cancel-button {
+        appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 13px;
+        width: 13px;
+        background-size: 10px 10px;
+        position: relative;
+        right: 10px; 
+        opacity: 70%;
+        background: url(/x-close-button/x-solid.svg);
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
 
+
+    /*Default Button End*/
     .hidden-label{
         display: none;
+    }
+
+    //Search Icon
+    .search-icon{
+        font-size: 20px;
+        position: relative;
+        top: 38px;
+        right: 140px;
+        opacity: 60%;
     }
 
     //Search Button
@@ -51,15 +81,6 @@ const FormStyled = styled.form`
     .search-btn:hover{
         background-color: ${({theme}) => theme.colors.buttonHoverColor};
         -webkit-text-stroke: ${({theme}) => theme.colors.buttonHoverColor};
-    }
-
-    //Search Icon
-    .search-icon{
-        font-size: 20px;
-        position: relative;
-        top: 38px;
-        left: 136px;
-        opacity: 60%;
     }
 
 
