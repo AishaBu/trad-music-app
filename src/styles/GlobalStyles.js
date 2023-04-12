@@ -12,7 +12,14 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-  background: ${({theme}) => theme.colors.body};
+  /*Set Color*/
+  background: wheat;
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+
+  //Keep footer at bottom
+  min-height: 100vh;
 }
 
 `
