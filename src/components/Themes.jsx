@@ -2,7 +2,7 @@
 const theme = {
     // Colors
     colors:{
-        body: "rgba(40, 67, 135, 0.8)",
+        backgroundColor: "rgba( 2, 2, 2, 0.2)",
         white: "white",
         buttonColor: "goldenrod",
         buttonHoverColor: "#e6bc53",
