@@ -2,7 +2,7 @@
 
 <table>
     <tr>
-    <td><img src="/readme-images/trad-music-mobile-screenshot.png"></td>
+    <td><img src="./public/readme-images/trad-music-mobile-screenshot.png"></td>
     </tr>
 </table>
 
